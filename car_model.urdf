@@ -53,7 +53,7 @@
 
     <visual>
       <geometry>
-        <box size="2.4 1.2 0.2"/>
+        <box size="1.8 1.2 0.2"/>
       </geometry>
       <origin rpy="0 0 0" xyz="1.2 0 0"/>
       <material name="yellow"/>
@@ -61,7 +61,7 @@
 
     <collision>
       <geometry>
-        <box size="2.4 1.2 0.2"/>
+        <box size="1.8 1.2 0.2"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
@@ -179,7 +179,7 @@
   <joint name="right_steer_joint" type="revolute">
     <parent link="base_link"/>
     <child link="right_steer"/>
-    <origin xyz="2.4 0.8 -0.25" rpy="0 0 0"/>
+    <origin xyz="1.8 0.8 -0.25" rpy="0 0 0"/>
     <limit effort="10" velocity="3" upper="0.69" lower="-0.5"/>
     <axis xyz="0 0 1"/>
   </joint>
@@ -243,7 +243,7 @@
 <joint name="left_steer_joint" type="revolute">
     <parent link="base_link"/>
     <child link="left_steer"/>
-    <origin xyz="2.4 -0.8 -0.25" rpy="0 0 0"/>
+    <origin xyz="1.8 -0.8 -0.25" rpy="0 0 0"/>
     <limit effort="10" velocity="3" upper="0.5" lower="-0.69"/>
     <axis xyz="0 0 1"/>
   </joint>
@@ -359,7 +359,7 @@
     </visual>
   </link>
   <joint name="hokuyo_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="2.5 0 -0.5"/>
+    <origin rpy="0 0 0" xyz="2.1 0 -0.5"/>
     <parent link="base_link"/>
     <child link="hokuyo_link"/>
   </joint>
@@ -396,7 +396,7 @@
  <joint name="steer_joint" type="revolute">
     <parent link="base_link"/>
     <child link="steer_link"/>
-    <origin xyz="2.4 0 -0.25" rpy="0 0 0"/>
+    <origin xyz="1.8 0 -0.25" rpy="0 0 0"/>
     <limit effort="10" velocity="3" upper="1" lower="-1"/>
     <axis xyz="0 0 1"/>
   </joint>
