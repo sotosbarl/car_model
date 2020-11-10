@@ -5,7 +5,7 @@ car_model:
   #   publish_rate: 50
 
   mobile_base_controller:
-    type        : "ackermann_steering_controller/AckermannSteeringController"
+    type: "ackermann_steering_controller/AckermannSteeringController"
     rear_wheel: 'rear_wheel_joint'
     front_steer: 'steer_joint'
     publish_rate: 50.0               # default: 50
@@ -16,8 +16,8 @@ car_model:
     # These are both optional.
     # ackermann_steering_controller will attempt to read either one or both from the
     # URDF if not specified as a parameter.
-    wheel_separation_h : 1.0
-    wheel_radius : 0.12
+    wheel_separation_h : 1.8
+    wheel_radius : 0.2
 
     # Wheel separation and radius multipliers for odometry calibration.
     wheel_separation_h_multiplier: 1.0 # default: 1.0
@@ -27,7 +27,7 @@ car_model:
     steer_pos_multiplier       : 1.0
 
     # Velocity commands timeout [s], default 0.5
-    cmd_vel_timeout: 0.25
+    cmd_vel_timeout: 5
 
     # Base frame_id
     base_frame_id: base_footprint   #default: base_link
@@ -37,22 +37,22 @@ car_model:
 
     # Velocity and acceleration limits
     # Whenever a min_* is unspecified, default to -max_*
-    linear:
-      x:
-        has_velocity_limits    : true
-        max_velocity           : 10.0  # m/s
-        min_velocity           : -5 # m/s
-        has_acceleration_limits: true
-        max_acceleration       : 0.8  # m/s^2
-        min_acceleration       : -0.4 # m/s^2
-        has_jerk_limits        : true
-        max_jerk               : 5.0 # m/s^3
-
-    angular:
-      z:
-        has_velocity_limits    : true
-        max_velocity           : 1.7  # rad/s
-        has_acceleration_limits: true
-        max_acceleration       : 1.5  # rad/s^2
-        has_jerk_limits        : true
-        max_jerk               : 2.5 # rad/s^3
+    # linear:
+    #   x:
+    #     has_velocity_limits    : true
+    #     max_velocity           : 16.0  # m/s
+    #     min_velocity           : -5 # m/s
+    #     has_acceleration_limits: true
+    #     max_acceleration       : 0.8  # m/s^2
+    #     min_acceleration       : -0.4 # m/s^2
+    #     has_jerk_limits        : true
+    #     max_jerk               : 5.0 # m/s^3
+    #
+    # angular:
+    #   z:
+    #     has_velocity_limits    : true
+    #     max_velocity           : 12  # rad/s
+    #     has_acceleration_limits: true
+    #     max_acceleration       : 1.5  # rad/s^2
+    #     has_jerk_limits        : true
+    #     max_jerk               : 2.5 # rad/s^3
